@@ -6,23 +6,30 @@
     tools:context="com.udacity.sandwichclub.DetailActivity"
     android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/image_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/sandwich_picture_content_description"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"
-            android:padding="8dp"/>
-
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/sandwich_picture_content_description"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:layout_above="@+id/also_known_label"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
 
             <TextView
                 android:id="@+id/also_known_label"
@@ -97,6 +104,6 @@
                 android:layout_below="@id/ingredients_tv"
                 android:paddingBottom="8dp"/>
         </RelativeLayout>
-
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
